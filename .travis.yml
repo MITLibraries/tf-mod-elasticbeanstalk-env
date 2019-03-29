@@ -1,0 +1,9 @@
+env:
+  - TF_VERSION=0.11.13
+before_install:
+  - wget https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip -O /tmp/tf.zip
+  - unzip -d bin/ /tmp/tf.zip
+  - export PATH=$PATH:$PWD/bin
+  - terraform -v
+script:
+  - make all
