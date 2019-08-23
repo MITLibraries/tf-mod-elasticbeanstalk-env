@@ -633,6 +633,56 @@ resource "aws_elastic_beanstalk_environment" "default" {
     name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 10))), 10)}"
     value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 10))), 10), var.env_default_value)}"
   }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 11))), 11)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 11))), 11), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 12))), 12)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 12))), 12), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 13))), 13)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 13))), 13), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 14))), 14)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 14))), 14), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 15))), 15)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 15))), 15), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 16))), 16)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 16))), 16), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 17))), 17)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 17))), 17), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 18))), 18)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 18))), 18), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 19))), 19)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 19))), 19), var.env_default_value)}"
+  }
+  setting {
+    namespace = "aws:elasticbeanstalk:application:environment"
+    name      = "${element(concat(keys(var.env_vars), list(format(var.env_default_key, 20))), 20)}"
+    value     = "${lookup(var.env_vars, element(concat(keys(var.env_vars), list(format(var.env_default_key, 20))), 20), var.env_default_value)}"
+  }
 
   ###===================== Notification =====================================================###
 
