@@ -5,8 +5,11 @@ all : fmt validate
 
 default: fmt
 
-validate:
-	@for m in $(modules); do (terraform validate --check-variables=false "$$m" && echo "√ $$m") || exit 1 ; done
+init:
+	terraform init
 
-fmt:
+validate:
+	@for m in $(modules); do (terraform validate "$$m" && echo "√ $$m") || exit 1 ; done
+
+fmt: init
 	terraform fmt -check
