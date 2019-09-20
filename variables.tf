@@ -134,7 +134,7 @@ variable "instance_refresh_enabled" {
 }
 
 variable "security_groups" {
-  type        = "list"
+  type        = list(string)
   default     = []
   description = "List of security groups to be allowed to connect to the EC2 instances"
 }
@@ -148,7 +148,7 @@ variable "vpc_id" {
 }
 
 variable "instance_subnets" {
-  type        = "list"
+  type        = list(string)
   description = "List of subnets to place instances on"
 }
 
@@ -259,7 +259,7 @@ variable "wait_for_ready_timeout" {
 # From: http://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region
 # Via: https://github.com/hashicorp/terraform/issues/7071
 variable "alb_zone_id" {
-  type = "map"
+  type = map(string)
 
   default = {
     ap-northeast-1 = "Z1R25G3KIG2GBW"
@@ -283,7 +283,7 @@ variable "alb_zone_id" {
 }
 
 variable "tags" {
-  type        = "map"
+  type        = map(string)
   default     = {}
   description = "Additional tags (e.g. `map('BusinessUnit`,`XYZ`)"
 }
@@ -300,7 +300,7 @@ variable "env_default_value" {
 
 variable "env_vars" {
   default     = {}
-  type        = "map"
+  type        = map(string)
   description = "Map of custom ENV variables to be provided to the Jenkins application running on Elastic Beanstalk, e.g. `env_vars = { JENKINS_USER = 'admin' JENKINS_PASS = 'xxxxxx' }`"
 }
 
@@ -315,45 +315,45 @@ variable "version_label" {
 }
 
 variable "document_root" {
-  type        = "string"
+  type        = string
   default     = "/"
   description = "Specify the child directory of your project that is treated as the public-facing web root."
 }
 
 variable "memory_limit" {
-  type        = "string"
+  type        = string
   default     = "256M"
   description = "Amount of memory allocated to the PHP environment."
 }
 
 variable "zlib_php_compression" {
-  type        = "string"
+  type        = string
   default     = "Off"
   description = "Specifies whether or not PHP should use compression for output."
 }
 
 variable "allow_url_fopen" {
-  type        = "string"
+  type        = string
   default     = "On"
   description = "Specifies if PHP's file functions are allowed to retrieve data from remote locations, such as websites or FTP servers."
 }
 
 variable "display_errors" {
-  type        = "string"
+  type        = string
   default     = "Off"
   description = "Specifies if error messages should be part of the output."
 }
 
 variable "max_execution_time" {
-  type        = "string"
+  type        = string
   default     = "60"
   description = "Sets the maximum time, in seconds, a script is allowed to run before it is terminated by the environment."
 }
 
 variable "composer_options" {
-  type        = "string"
+  type        = string
   default     = ""
   description = "Sets custom options to use when installing dependencies using Composer through composer.phar install."
-
   # For more information including available options, go to http://getcomposer.org/doc/03-cli.md#install.
 }
+
