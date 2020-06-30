@@ -369,7 +369,7 @@ resource "aws_elastic_beanstalk_environment" "default" {
   setting {
     namespace = "aws:autoscaling:updatepolicy:rollingupdate"
     name      = "RollingUpdateEnabled"
-    value     = "true"
+    value     = var.rolling_update_enabled
   }
 
   setting {
@@ -944,4 +944,3 @@ resource "aws_route53_record" "default" {
     evaluate_target_health = "false"
   }
 }
-

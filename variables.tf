@@ -171,6 +171,11 @@ variable "availability_zones" {
   description = "Choose the number of AZs for your instances"
 }
 
+variable "rolling_update_enabled" {
+  default     = true
+  description = "Enable rolling updates"
+}
+
 variable "rolling_update_type" {
   default     = "Health"
   description = "Set it to Immutable to apply the configuration change to a fresh group of instances"
@@ -356,4 +361,3 @@ variable "composer_options" {
   description = "Sets custom options to use when installing dependencies using Composer through composer.phar install."
   # For more information including available options, go to http://getcomposer.org/doc/03-cli.md#install.
 }
-
