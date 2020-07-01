@@ -64,6 +64,7 @@ Additional resources for load balanced environments:
 | notification\_topic\_arn | Notification topic arn | string | `""` | no |
 | notification\_topic\_name | Notification topic name | string | `""` | no |
 | preferred\_start\_time | Configure a maintenance window for managed actions in UTC | string | `"Sun:10:00"` | no |
+| rolling\_\update\_enabled | Enable rolling updates | string | "true" | no | 
 | rolling\_update\_type | Set it to Immutable to apply the configuration change to a fresh group of instances | string | `"Health"` | no |
 | root\_volume\_size | The size of the EBS root volume | string | `"8"` | no |
 | root\_volume\_type | The type of the EBS root volume | string | `"gp2"` | no |
